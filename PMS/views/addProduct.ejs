@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <%- include('./header'); %>
+</head>
+<body>
+<div class="container">
+    <div id="user_table">
+        <% if(err_msg.length > 0) { %>
+            <div class="alert alert-danger m-b-0" id="ajax-alert" role="alert">
+                    <%= err_msg %>
+            </div><br>
+        <% } %>
+        <% if(success_msg.length > 0) { %>
+            <div class="alert alert-success mt-4" role="alert">
+                    <%= success_msg %>
+            </div><br>
+        <% } %>    
+    <div class="row">
+        <div class="col-lg-4 col-sm-6">
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <form action="/prod/addProduct" method="POST">
+                <fieldset>
+                    <legend class="form-label mt-4" style="text-align:center;"><u style="text-decoration-color: red;text-underline-offset: 2px;">Add Product</u></legend>
+                    <div class="form-group">
+                        <div>
+                            <label class="form-label mt-1">Product Name</label>
+                            <div class="form-group">
+                                <input type="text" name="pname" id="pname"
+                                placeholder="Enter your Product name" class="form-control input-lg"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label mt-1">Price</label>
+                        <input type="price" name="price" id="price" placeholder="Please enter price" class="form-control input-lg"></input>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label mt-1">Quantity in stocks</label>
+                        <select name="quantity" class="form-control input-lg" id="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label mt-1">vendor</label>
+                        <input type="vendor" name="vendor" id="vendor" placeholder="Please provide vendor" class="form-control input-lg"></input>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label mt-1">Warranty</label>
+                        <select name="warranty" class="form-control input-lg" id="warranty">
+                            <option value="avaliable">Avaliable</option>
+                            <option value="notavailable">Not Available</option>
+                        </select>
+                    <div>
+                        <div class="col-lg-10">
+                            <input type="submit" value="Submit" class="btn btn-primary mt-2">
+                        </div>
+                    </div>
+        </div>
+        </fieldset>
+        </form>
+    </div>
+</div>
+</body>
+</html>
