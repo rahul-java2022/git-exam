@@ -1,0 +1,37 @@
+{
+  "name": "node-project",
+  "version": "1.0.0",
+  "description": "first node project",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon server.js",
+    "start:prod": "NODE_ENV = production nodemon server.js"
+  },
+  "author": "Rahul Biswas",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^14.2.0",
+    "ejs": "^3.1.6",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.14",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "pug": "^3.0.2",
+    "slugify": "^1.6.5",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "ndb": "^1.1.5"
+  }
+}
